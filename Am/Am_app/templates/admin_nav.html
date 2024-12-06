@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Navigation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #FF9D3D;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #493628;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 30px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        .collapse a {
+            padding-left: 50px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+    </style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+    <!-- Building Planning Section with Dropdown -->
+    <a href="{% url 'index' %}" class="dropdown-item">Home</a>
+    <a href="#buildingSubmenu" data-toggle="collapse" class="dropdown-toggle">Building Planning.</a>
+    <div id="buildingSubmenu" class="collapse">
+        <a href="{% url 'building' %}" class="dropdown-item">Building.</a>
+        <a href="{% url 'building_view1' %}" class="dropdown-item">View</a>
+    </div>
+
+    <!-- Other Links -->
+    <a href="#struturalSubmenu" data-toggle="collapse" class="dropdown-toggle">structural Design</a>
+    <div id="struturalSubmenu" class="collapse">
+    <a href="{% url 'structural' %}" class="dropdown-item">structural Design</a>
+    <a href="{% url 'structural_view1' %}" class="dropdown-item">View</a>
+        </div>
+
+
+
+    <a href="#gallerySubmenu" data-toggle="collapse" class="dropdown-toggle">3-d Elevation</a>
+    <div id="gallerySubmenu" class="collapse">
+    <a href="{% url 'gallery' %}" class="dropdown-item">elevation</a>
+    <a href="{% url 'gallery_view1' %}" class="dropdown-item">elvation</a>
+        </div>
+
+
+       <a href="#renovationSubmenu" data-toggle="collapse" class="dropdown-toggle">Renovation</a>
+    <div id="renovationSubmenu" class="collapse">
+    <a href="{% url 'renovation' %}" class="dropdown-item">Renovation</a>
+    <a href="{% url 'renovation_view1' %}" class="dropdown-item">View</a>
+        </div>
+
+    <a href="#serviceSubmenu" data-toggle="collapse" class="dropdown-toggle">Interior & Exterior Design</a>
+    <div id="serviceSubmenu" class="collapse">
+    <a href="{% url 'service' %}" class="dropdown-item">I & E design</a>
+    <a href="{% url 'service_view1' %}" class="dropdown-item">View</a>
+         </div>
+
+    <a href="#swimmingSubmenu" data-toggle="collapse" class="dropdown-toggle">swimming pools</a>
+    <div id="swimmingSubmenu" class="collapse">
+    <a href="{% url 'swimming' %}" class="dropdown-item">swimming pools.</a>
+    <a href="{% url 'swimming_view1' %}" class="dropdown-item">View</a>
+         </div>
+
+     <a href="#freelancingSubmenu" data-toggle="collapse" class="dropdown-toggle">Freelancing</a>
+    <div id="freelancingSubmenu" class="collapse">
+    <a href="{% url 'freelancing' %}" class="dropdown-item">Freelancing</a>
+    <a href="{% url 'freelancing_view1' %}" class="dropdown-item">View</a>
+          </div>
+      <a href="#jointventureSubmenu" data-toggle="collapse" class="dropdown-toggle">jointventure</a>
+    <div id="jointventureSubmenu" class="collapse">
+    <a href="{% url 'joinventure' %}" class="dropdown-item">jointventure</a>
+    <a href="{% url 'joinventure_view1' %}" class="dropdown-item">View</a>
+          </div>
+
+ <a href="#LandscapeSubmenu" data-toggle="collapse" class="dropdown-toggle">Landscape</a>
+    <div id="LandscapeSubmenu" class="collapse">
+    <a href="{% url 'landscape' %}" class="dropdown-item">Landscape</a>
+    <a href="{% url 'landscape_view1' %}" class="dropdown-item">View</a>
+          </div>
+
+
+     <a href="#fabricationSubmenu" data-toggle="collapse" class="dropdown-toggle">fabrication</a>
+    <div id="fabricationSubmenu" class="collapse">
+    <a href="{% url 'fabrication' %}" class="dropdown-item">fabrication</a>
+    <a href="{% url 'fabrication_view1' %}" class="dropdown-item">View</a>
+          </div>
+  <a href="#PaintContractSubmenu" data-toggle="collapse" class="dropdown-toggle">PaintContract</a>
+    <div id="PaintContractSubmenu" class="collapse">
+    <a href="{% url 'paintcontract' %}" class="dropdown-item">PaintContract</a>
+    <a href="{% url 'paintcontract_view1' %}" class="dropdown-item">View</a>
+          </div>
+
+
+    <a href="#retro_fittingSubmenu" data-toggle="collapse" class="dropdown-toggle">Retro fitting</a>
+    <div id="retro_fittingSubmenu" class="collapse">
+    <a href="{% url 'retro_fitting' %}" class="dropdown-item">retro fitting</a>
+    <a href="{% url 'retro_fitting_view1' %}" class="dropdown-item">View</a>
+          </div>
+
+
+    <a href="#ongoing_projectSubmenu" data-toggle="collapse" class="dropdown-toggle">Project </a>
+    <div id="ongoing_projectSubmenu" class="collapse">
+    <a href="{% url 'ongoing_project' %}" class="dropdown-item">Ongoing Project</a>
+    <a href="{% url 'ongoing_project_view1' %}" class="dropdown-item">View</a>
+        <a href="{% url 'completed_project' %}" class="dropdown-item">Completed  Project</a>
+    <a href="{% url 'completed_project_view1' %}" class="dropdown-item">View</a>
+
+        </div>
+
+
+
+
+
+  <a href="{% url 'index' %}" class="dropdown-item">Logout</a>
+
+</div>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF List</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        /* Custom styling for the table and page */
+        body {
+            background-color: #f8f9fa; /* Light background for the page */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343a40; /* Dark color for heading */
+        }
+
+        table {
+            background-color: #fff; /* White background for table */
+        }
+
+        th {
+            background-color: #343a40; /* Dark background for table headers */
+            color: #fff; /* White text for headers */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1; /* Light grey hover effect for table rows */
+        }
+
+        .btn-view {
+            background-color: #007bff; /* Bootstrap primary blue */
+            color: white;
+            border-radius: 0;
+        }
+
+        .btn-view:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1>Uploaded PDFs</h1>
+
+        <!-- Responsive table with borders and hover effect -->
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">PDF</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dop in dop_objects %}
+                    <tr>
+                        <td>
+                            <a href="{{ dop.pdf.url }}" target="_blank" class="btn btn-view">View PDF</a> <!-- View PDF Button -->
+                        </td>
+                        <td>{{ dop.description|default:"No Description" }}</td> <!-- Description or fallback -->
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="2" class="text-center">No PDFs found.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

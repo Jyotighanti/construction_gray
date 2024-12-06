@@ -1,0 +1,249 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>A M  Construction</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Construction Company Website Template" name="keywords">
+        <meta content="Construction Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="/static/img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="/static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="/static/lib/slick/slick.css" rel="stylesheet">
+        <link href="/static/lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="/static/css/style.css" rel="stylesheet">
+    </head>
+
+
+    <body>
+  <div class="wrapper">
+    <!-- Top Bar Start -->
+<div class="top-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-12 text-center">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/static/img/am1.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                <div class="row justify-content-center">
+                      <div class="col-2 text-center">
+                        <div class="top-bar-item">
+                            <div class="top-bar-icon">
+                                <i class="flaticon-send-mail"></i>
+                            </div>
+                            <div class="top-bar-text">
+                                <h3 style="font-weight: bold;">Email Us</h3>
+                                <p style="font-weight: bold;">amconstruction1111@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 text-center">
+                        <div class="top-bar-item">
+                            <div class="top-bar-icon">
+                                <i class="flaticon-call"></i>
+                            </div>
+                            <div class="top-bar-text">
+                                <h3 style="font-weight: bold;">Call Us</h3>
+                                <p style="font-weight: bold;">+91 8217637187</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 text-center">
+                        <div class="top-bar-item">
+                            <div class="top-bar-text">
+                                <h3 style="font-weight: bold;">GSTIN</h3>
+                                  <p style="font-weight: bold;">29EHJPP7525R1Z6</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="nav-bar">
+        <div class="container-fluid">
+             <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                        <a href="#" class="navbar-brand">MENU</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto">
+                                <a href="/" class="nav-item nav-link active">Home</a>
+                                <a href="#about" class="nav-item nav-link">About</a>
+
+
+                                <a href="#service" class="nav-item nav-link">Service</a>
+                                 <a href="#project" class="nav-item nav-link">Projects</a>
+                                <a href="#contact" class="nav-item nav-link">Contact</a>
+                                <a href="{% url 'job_application_view' %}" class="nav-item nav-link">career</a>
+                            </div>
+                            <div class="ml-auto">
+
+                            </div>
+                        </div>
+                    </nav>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+</div>
+
+
+
+
+<style>
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional: Adjust the dropdown position */
+.navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+/* Custom colors */
+.navbar {
+    background-color: #010038; /* Dark background for navbar */
+}
+
+.navbar .nav-link {
+    color: white !important; /* Set orange color for links */
+}
+
+.navbar .dropdown-menu {
+    background-color: black; /* Black background for dropdown */
+}
+
+.navbar .dropdown-item {
+    color: orange; /* Orange dropdown items */
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #444; /* Darker background on hover for dropdown items */
+    color: white; /* White text on hover */
+}
+</style>
+      <style>
+    .carousel-caption {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .carousel-item.active .carousel-caption {
+        opacity: 1;
+    }
+</style>
+
+
+    <!-- Nav Bar End -->
+</div>
+
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+
+    <!-- Nav Bar End -->
+</div>
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="col-md-8"> <!-- Adjust the width of the form here -->
+        <h1 class="text-center">Job Application Form</h1>
+        <form method="POST" action="{% url 'job_application_view' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="full_name">Full Name:</label>
+                    <input type="text" id="full_name" name="full_name" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="resume">Upload Resume:</label>
+                    <input type="file" id="resume" name="resume" class="form-control-file" accept=".pdf, .doc, .docx" required>
+                </div>
+            </div>
+
+            {% if error %}
+                <p class="error text-danger">{{ error }}</p>
+            {% endif %}
+
+            <!-- Centering the Submit Button -->
+            <div class="row mb-3">
+                <div class="col-8 text-center"> <!-- Using col-12 for full-width and text-center for centering -->
+                    <button type="submit" class="btn" style="background-color: #252243; color: white; padding: 10px 10px; font-size: 1rem;">
+                        Submit Application
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'lib/slick/slick.min.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,2210 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AM Construction</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="/static/img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="/static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/static/lib/slick/slick.css" rel="stylesheet">
+    <link href="/static/lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+    /* Ensure images inside the .card have fixed sizes and rounded corners */
+    .card-img-top {
+        width: 100%;  /* Ensure images fill the width of the card */
+        height: 300px;  /* Fixed height for all images */
+        object-fit: cover;  /* Ensure the image fills the area without distortion */
+        border: none;  /* Adds rounded corners to images */
+    }
+
+    /* Optional: Style for the card body and description text */
+    .card-body {
+        text-align: center;
+    }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    /* Optionally, ensure the cards have uniform layout */
+    .image-container {
+        margin-bottom: 30px;
+    }
+</style>
+ <style>
+        /* General Carousel Styling */
+        .carousel-inner {
+            height: 400px;
+            position: relative;
+            perspective: 1200px; /* Adds depth for 3D effects */
+        }
+
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transform: scale(0.8); /* Start smaller for 3D effect */
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+            transform: scale(1); /* Full size */
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 3D Slice Square Animation */
+        @keyframes sliceSquareIn {
+            0% {
+                transform: scale(0) rotateY(90deg);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1) rotateY(0deg);
+                opacity: 1;
+            }
+        }
+
+        /* 3D Bricks to Left Animation */
+        @keyframes bricksSlide {
+            0% {
+                clip-path: inset(0% 0% 0% 0%);
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                clip-path: inset(0% 0% 0% 0%);
+                transform: translateX(0%);
+                opacity: 1;
+            }
+        }
+
+        /* 3D Vertical Slider Card Carousel */
+        @keyframes verticalSliderIn {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .carousel-item:nth-child(1).active {
+            animation: sliceSquareIn 1.2s ease-in-out forwards;
+        }
+
+        .carousel-item:nth-child(2).active {
+            animation: bricksSlide 1.5s ease-in-out forwards;
+        }
+
+        .carousel-item:nth-child(3).active {
+            animation: verticalSliderIn 1.2s ease-in-out forwards;
+        }
+
+        .carousel-item {
+            transform-style: preserve-3d;
+        }
+    </style>
+</head>
+
+
+    <!-- Custom CSS to make images responsive and dynamic -->
+     <style>
+        /* Ensure images inside the .card have fixed sizes */
+        .card-img-top {
+            width: 100%;  /* Ensure images fill the width of the card */
+            height: 300px;  /* Fixed height for all images */
+            object-fit: cover;  /* Ensure the image fills the area without distortion */
+        }
+
+        /* Optional: Style for the card body and description text */
+        .card-body {
+            text-align: center;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Optionally, ensure the cards have uniform layout */
+        .image-container {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+           <div class="wrapper">
+        <!-- Top Bar Start -->
+        <div class="top-bar">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12 text-center">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="{% static '/img/am1.png' %}" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                       <!-- <div class="row justify-content-center">
+                       <div class="col-3 text-center">-->
+<!--                                <div class="top-bar-item">-->
+<!--                                    <div class="top-bar-icon">-->
+<!--                                        <i class="flaticon-send-mail"></i>-->
+<!--                                    </div>-->
+<!--                                    <div class="top-bar-text">-->
+<!--                                        <h3 style="font-weight: bold;">Email Us</h3>-->
+<!--                                        <p style="font-weight: bold;">amconstruction1111@gmail.com</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-3 text-center">-->
+<!--                                <div class="top-bar-item">-->
+<!--                                    <div class="top-bar-icon">-->
+<!--                                        <i class="flaticon-call"></i>-->
+<!--                                    </div>-->
+<!--                                    <div class="top-bar-text">-->
+<!--                                        <h3 style="font-weight: bold;">Call Us</h3>-->
+<!--                                        <p style="font-weight: bold;">+91 8217637187</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+ <!-- Contact Us Button -->
+
+<div style="margin: 0 1rem; text-align: right;">
+    <button data-toggle="modal" data-target="#newModal"
+        style="background-color: #808080; color: #000000; padding: .5rem 1.5rem; border: none; font-weight: 600; font-family:monospace">
+        Contact Us
+    </button>
+</div>
+
+ <div class="row justify-content-center">
+<!-- Modal (will open with zoom effect) -->
+<div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="newModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newModalLabel">Contact Us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- The form goes here -->
+                <h5 style="text-align: center;">Book FREE Appointment</h5>
+                <div style="color: #635189; font-size: 14px; text-align: center; padding-bottom: 1rem; font-weight: 500;">
+                    For Best Quality Construction At Affordable Rates
+                </div>
+
+                <form onsubmit="submitConstructionRequest('1','top_banner');" onkeydown="return event.key != 'Enter';">
+                    <div class="row" style="margin: 0;">
+                        <div class="col-12 mb-2" style="padding: 0;">
+                            <input class="form-control form-font" id="name1" type="text" placeholder="Full Name*" value="" name="name" required style="width: 100%; height: 40px;" maxlength="30">
+                        </div>
+                        <div class="col-12 mb-2" style="padding: 0;">
+                            <input class="form-control form-font" id="phone1" type="tel" placeholder="Mobile Number*" name="phone" value="" required style="width: 100%; height: 40px;">
+                        </div>
+                        <div id="error-phone1" style="font-size: 12px; color: red; position: relative; top: -10px; display: none;"></div>
+                        <div class="col-12 text-center mb-2" style="padding: 0;">
+                            <input onclick="handleLocation(1)" onfocus="handleLocation(1)" id="pac-input1" class="form-control controls" type="search" placeholder="Location of your plot*" style="border-color: #e3e3e3; background-color: #f1f4fd;" required autocomplete="off" oninput="disableSubmitButton(1)" />
+                        </div>
+                        <div class="col-12 mb-2" id="estimatedProjectStartDateForm1_1" style="display: none; padding: 0;">
+                            <label for="timeframe" style="font-size: 12px;" id="estimatedProjectStartDateLabelForm1_1">Project start date*</label>
+                            <select id="estimatedProjectStartDateValueForm1_1" class="form-control form-font" name="timeframe" style="appearance: auto;">
+                                <option value="immediately">Immediately</option>
+                                <option value="within-3-months">Within 3 Months</option>
+                                <option value="within-6-months">Within 6 Months</option>
+                                <option value="after-6-months">After 6 Months</option>
+                            </select>
+                        </div>
+                        <div class="col-12 text-center" style="padding: 0;">
+                            <button class="btn w-100 bnbdark button-font" style="background-color: #808080; color: #000000; padding: 0.7rem 0" type="submit" id="submit1">Start Your Construction</button>
+                        </div>
+                    </div>
+                </form>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <style>
+ /* Zoom-in effect for modal */
+.modal.fade .modal-dialog {
+    transform: scale(0.7);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+}
+ </style>
+
+                            <!-- Move GSTIN here in the same row -->
+<!--                            <div class="col-3 text-center">-->
+<!--                                <div class="top-bar-item">-->
+<!--                                    <div class="top-bar-text">-->
+<!--                                        <h3 style="font-weight: bold;">GSTIN</h3>-->
+<!--                                        <p style="font-weight: bold;">29EHJPP7525R1Z6</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="{% url 'index' %}"  class="nav-item nav-link active">Home</a>
+                            <a href="{% url 'index' %}" class="nav-item nav-link">About</a>
+                            <a href="{% url 'index' %}"  class="nav-item nav-link">Service</a>
+                            <a href="{% url 'index' %}"  class="nav-item nav-link">Projects</a>
+                            <a href="{% url 'index' %}"  class="nav-item nav-link">Contact</a>
+                            <a href="{% url 'job_application_view' %}" class="nav-item nav-link">career</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+    </div>
+<!-- Carousel Start -->
+<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+
+    <div class="carousel-inner">
+        <!-- First Slide (3D Slice Square Animation) -->
+        <div class="carousel-item active">
+            <img src="{% static 'img/c1.jpg' %}" alt="Slide 1">
+            <div class="carousel-caption">
+                <h1>A M Construction</h1>
+                <p>Complete Building Solution</p>
+            </div>
+        </div>
+
+        <!-- Second Slide (3D Bricks to Left Animation) -->
+        <div class="carousel-item">
+            <img src="{% static 'img/c02.jpg' %}" alt="Slide 2">
+            <div class="carousel-caption">
+                <h1>A M Construction</h1>
+                <p>Complete Building Solution</p>
+            </div>
+        </div>
+
+        <!-- Third Slide (3D Vertical Slider Animation) -->
+        <div class="carousel-item">
+            <img src="{% static 'img/c03.jpg' %}" alt="Slide 3">
+            <div class="carousel-caption">
+                <h1>A M Construction</h1>
+                <p>Complete Building Solution</p>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Floating Form Overlay (Right Corner) -->
+<!-- Floating Form Overlay (Right Corner) -->
+<div class="is-not-mobile" id="leadForm" style="position: absolute; top: 20px; right: 20px; width: auto; display: flex; justify-content: flex-start; align-items: flex-start;">
+    <div style="display: flex; justify-content: flex-start;">
+        <div style="padding: 24px; border: 1px solid #c9c9c9; background-color: #fff; border-radius: 12px; box-shadow: 0px 5px 8px -5px; margin-top: 0; max-width: 350px; width: 100%; height: 400px;">
+
+            <!-- Close Button (X) -->
+            <span id="closeForm" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 24px; color: #000;">&times;</span>
+
+            <h5 style="text-align: center;">Book FREE Appointment</h5>
+            <div style="color: #635189; font-size: 14px; text-align: center; padding-bottom: 1rem; font-weight: 500;">
+                For Best Quality Construction At Affordable Rates
+            </div>
+
+            <form onsubmit="submitConstructionRequest('1','top_banner');" onkeydown="return event.key != 'Enter';">
+                <div class="row">
+                    <!-- Full Name field -->
+                    <div class="col-12 mb-3">
+                        <input class="form-control form-font" id="name1" type="text" placeholder="Full Name*" value="" name="name" required style="width: 100%;" maxlength="30">
+                    </div>
+
+                    <!-- Mobile Number field -->
+                    <div class="col-12 mb-3">
+                        <input class="form-control form-font" id="phone1" type="tel" placeholder="Mobile Number*" name="phone" value="" required style="width: 100%; height: 40px;">
+                    </div>
+                    <div id="error-phone1" style="font-size: 12px; color: red; position: relative; top: -10px; display: none;"></div>
+
+                    <!-- Location of your plot field -->
+                    <div class="col-12 text-center mb-3">
+                        <div class="sm-right-simplified" id="sm-right-id">
+                            <div class="sm-right-search" style="margin-bottom: 8px;">
+                                <input onclick="handleLocation(1)" onfocus="handleLocation(1)" id="pac-input1" class="form-control controls" type="search" placeholder="Location of your plot*" style="border-color: #e3e3e3; background-color: #f1f4fd;" required autocomplete="off" oninput="disableSubmitButton(1)" />
+                            </div>
+                            <div id="map" style="display: none;"></div>
+                            <p id="state-error1" style="color: red; display: none; margin-top: -0.5rem; font-size: 12px;">Please select city name instead of state.</p>
+                            <p id="location-error1" style="color: red; display: none; margin-top: -0.5rem; font-size: 12px;">Please select location of your plot.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Start Date field -->
+                    <div class="col-12 mb-3" id="estimatedProjectStartDateForm1_1" style="display: none;">
+                        <label for="timeframe" style="font-size: 12px;" id="estimatedProjectStartDateLabelForm1_1">Project start date*</label>
+                        <select id="estimatedProjectStartDateValueForm1_1" class="form-control form-font" name="timeframe" style="appearance: auto;">
+                            <option value="immediately">Immediately</option>
+                            <option value="within-3-months">Within 3 Months</option>
+                            <option value="within-6-months">Within 6 Months</option>
+                            <option value="after-6-months">After 6 Months</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12 text-center">
+                        <button class="btn w-100 bnbdark button-font" style="background-color: #808080; color: #000000; padding: 0.7rem 0" type="submit" id="submit1">Start Your Construction</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS for styling the form and close button -->
+<style>
+    /* Adjust the form container and ensure it's at the top-right */
+    .is-not-mobile {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    /* Styling for the close button (X) */
+    #closeForm {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #000;
+    }
+</style>
+
+<!-- JavaScript for hiding the form -->
+<script>
+    // Get the close button and form element
+    var closeButton = document.getElementById('closeForm');
+    var leadForm = document.getElementById('leadForm');
+
+    // Add event listener to the close button
+    closeButton.addEventListener('click', function() {
+        leadForm.style.display = 'none';  // Hide the form when close button is clicked
+    });
+</script>
+
+
+    <!-- Carousel Controls -->
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- Carousel End -->
+ <!-- Carousel End -->
+<div class="feature wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid">
+        <div class="row align-items-stretch">
+            <!-- Expert Worker -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="feature-item text-center" style="background-color: #808080; height: 300px;">
+                    <div class="feature-icon">
+                        <i class="flaticon-worker"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h5 class="text-white font-weight-bold" style="margin-bottom:13px;">Expert Worker</h5>
+                        <p class="text-white font-weight-bold">
+                            "Expertise in construction transforms dreams into reality. Trust our skilled team to deliver excellence at every stage of your project."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Quality Work -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="feature-item text-center" style="background-color: #808080; height: 300px;">
+                    <div class="feature-icon">
+                        <i class="flaticon-building"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h5 class="text-white font-weight-bold" style="margin-bottom:13px;s">Quality Work</h5>
+                        <p class="text-white font-weight-bold">
+                            "Quality craftsmanship builds the future. In construction, excellence is not just an option; it’s our commitment."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 24/7 Support -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="feature-item text-center" style="background-color: #808080; height: 300px;">
+                    <div class="feature-icon">
+                        <i class="flaticon-call"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h5 class="text-white font-weight-bold" style="margin-bottom:13px;">24/7 Support</h5>
+                        <p class="text-white font-weight-bold">
+                            "With 24/7 support, we’re always here to ensure your construction project runs smoothly. Your peace of mind is our priority, day or night."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container mt-5">
+
+        <!-- Marquee Container -->
+        <div class="marquee-container1">
+            <div class="marquee-content">
+               <div class="project-name"><img src="{% static 'img/img1.png' %}" alt="Project Alpha" class="marquee-image"></div>
+                 <div class="project-name"><img src="{% static 'img/img2.png' %}" alt="Project Alpha" class="marquee-image"></div>
+                 <div class="project-name"><img src="{% static 'img/img3.png' %}" alt="Project Alpha" class="marquee-image"></div>
+                 <div class="project-name"><img src="{% static 'img/img4.png' %}" alt="Project Alpha" class="marquee-image"></div>
+                 <div class="project-name"><img src="{% static 'img/img5.png' %}" alt="Project Alpha" class="marquee-image"></div>
+                 <div class="project-name"><img src="{% static 'img/img6.png' %}" alt="Project Alpha" class="marquee-image"></div>
+                 <div class="project-name"><img src="{% static 'img/img7.png' %}" alt="Project Alpha" class="marquee-image"></div>
+                 <div class="project-name"><img src="{% static 'img/img8.png' %}" alt="Project Alpha" class="marquee-image"></div>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* Marquee container styling */
+.marquee-container1 {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Marquee content for continuous scroll */
+.marquee-content {
+    display: flex;
+    animation: marquee 10s linear infinite;
+}
+
+/* Style for individual project images */
+.project-name {
+    display: inline-block;
+    margin-right: 50px; /* Adjust space between images */
+}
+
+/* Adjust the size of the images */
+.marquee-image {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Marquee animation */
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+    </style>
+<!-- Section: Customer Testimonials -->
+    <section class="service-area" id="service" style="padding: 30px 0;">
+        <div class="container" style="max-width: 100%; z-index: 0; padding: 0;">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9 col-lg-7 col-xxl-6">
+                    <div class="text-center">
+                        <h2 class="pt-3" style="color:#1F0756; font-size: 25px;">Listen To Our Customers</h2>
+                        <p style="line-height: 1.3; color:#635189; margin-bottom: 0;" class="">
+                            Trusted by 7000+ Happy Homeowners!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; overflow: auto; padding: 0 .5rem; margin: 1rem 0;">
+                <!-- Video Thumbnails -->
+                <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/vkew-1KK3Sc')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                     <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/dGa4mvddI0M')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                      <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                       <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                 <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                       <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                 <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                       <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                 <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                       <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                 <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                       <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                 <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                      <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                 <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                        <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                 <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                        <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                 <div data-toggle="modal" data-target="#videoPlayerModal" onclick="setVideoUrl('https://www.youtube.com/embed/4FWp11wJ8zk')">
+                    <div style="width:180px; padding: 0 .3rem;">
+                      <img src="{% static 'img/review.png' %}" alt="" class="rounded border"
+                             style="display: block; width: 168px; height: 211px;" loading="lazy">
+                    </div>
+                </div>
+                <!-- Add more video thumbnails as needed -->
+            </div>
+             <div style="margin: 1.5rem; text-align: center;">
+    <button data-toggle="modal" data-target="#newModal"
+        style="background-color: #808080; color: #000000; width:268px;; padding: .5rem 1.5rem; border: none; font-weight: 600; font-family:monospace">
+        Start Your Construction
+    </button>
+</div>
+        </div>
+    </section>
+
+    <!-- Modal for Video Playback -->
+    <div class="modal fade" id="videoPlayerModal" tabindex="-1" role="dialog" aria-labelledby="videoPlayerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoPlayerModalLabel">Video Player</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="videoPlayer" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- About Start -->
+<div class="about wow fadeInUp" data-wow-delay="0.4s">
+    <div class="row align-items-center">
+        <!-- Carousel Image Section (First on Mobile) -->
+        <div class="col-lg-5 col-md-6 about-img">
+            <div id="aboutCarousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-wrap="true">
+                <div class="carousel-inner">
+                    <!-- First Image -->
+                    <div class="carousel-item active">
+                        <img src="{% static 'img/a2.jpeg' %}" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <!-- Second Image -->
+                    <div class="carousel-item">
+                        <img src="{% static 'img/about2.jpeg' %}" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <!-- Third Image -->
+                    <div class="carousel-item">
+                        <img src="{% static 'img/resort (1).jpeg' %}" class="d-block w-100" alt="Image 3">
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#aboutCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Text Section (Second on Mobile) -->
+        <div class="col-lg-7 col-md-6 about-text">
+            <div class="section-header text-left">
+                <h3 style="font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); color: #0B192C;">
+                    <b>About Us</b>
+                </h3>
+                <p style="font-size: 25px;"><b>A M Construction</b></p>
+            </div>
+            <div class="about-text" style="text-align: justify; line-height: 1.6; font-size: 20px; color: #333;">
+                <p>
+                    At A M Constructions, we specialize in creating high-quality, innovative construction solutions tailored to meet our clients’ unique needs. Founded in 2020, we have grown from a small, family-owned business into a trusted leader in the construction industry. With decades of experience, we’ve successfully completed a wide range of residential, commercial, and industrial projects.
+                </p>
+                <p>
+                    Our mission is to build exceptional structures that enhance the lives of those who use them, while prioritizing quality, safety, and sustainability. From custom home builds to large-scale commercial developments, we are committed to delivering results that exceed expectations. We combine industry expertise with cutting-edge technology, ensuring that every project is executed with precision, attention to detail, and efficiency.
+                </p>
+                <p>
+                    Our team is composed of skilled professionals, including architects, engineers, project managers, and craftsmen, all of whom bring dedication and passion to every project. Led by <b>ANANDKUMAR H & PRAJWAL AK</b>, we pride ourselves on maintaining strong client relationships, open communication, and a customer-first approach that ensures a seamless experience from concept to completion.
+                </p>
+                <p>
+                    At A M Constructions, safety is paramount, and we strictly adhere to industry standards and protocols to protect our workers and clients. We also integrate sustainable building practices to minimize our environmental footprint, creating structures that stand the test of time.
+                </p>
+                <p>
+                    Whether you're looking to build a new home, expand your business, or develop an industrial facility, A M Constructions is here to bring your vision to life.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+<!-- Custom CSS for adjusting the carousel image height and ensuring it loops correctly -->
+<style>
+    /* Adjust height for the carousel */
+.carousel-inner {
+    height: 400px; /* Adjust the height as needed */
+}
+
+/* Ensure the images cover the container */
+.carousel-item img {
+    object-fit: cover; /* Ensures the image covers the container */
+    height: 100%; /* Makes sure the image takes up the full height of the carousel */
+    width: 100%; /* Ensures full width display */
+}
+
+/* Ensuring no excessive gap in the About Section */
+.about .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Styling the text */
+.about-text p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+</style>
+
+
+    </div>
+
+<!--    <style>-->
+<!--        /* Custom CSS for adjusting the carousel image height */-->
+<!--        .carousel-inner {-->
+<!--            height: 400px;-->
+<!--            /* Adjust the height as needed */-->
+<!--        }-->
+
+<!--        .carousel-item img {-->
+<!--            object-fit: cover;-->
+<!--            /* Ensures the image covers the container */-->
+<!--            height: 100%;-->
+<!--            /* Makes sure the image takes up the full height of the carousel */-->
+<!--        }-->
+
+<!--        /* Ensure proper column alignment and no excessive gap */-->
+<!--        .about .row {-->
+<!--            margin-right: 0;-->
+<!--            margin-left: 0;-->
+<!--        }-->
+
+<!--        .about-text p {-->
+<!--            line-height: 1.6;-->
+<!--            font-size: 20px;-->
+<!--        }-->
+<!--    </style>-->
+
+
+
+    <!-- Fact Start -->
+    <div class="container" id="service">
+        <div class="service">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 style="font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); color: #0B192C;">
+                        <b>Our Service</b>
+                    </h2>
+
+                </div>
+
+                <!-- First row of buttons -->
+                <div class="row mt-4">
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-black d-flex align-items-center justify-content-center text-white"
+                            href="/building_view">Building Planning & Estimate</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-orange d-flex align-items-center justify-content-center text-white"
+                            href="/structural_view">Structural Design</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-black d-flex align-items-center justify-content-center text-white"
+                            href="/gallery_view">3-D Elevation</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-orange d-flex align-items-center justify-content-center text-white"
+                            href="/renovation_view">Renovation</a>
+                    </div>
+                </div>
+
+                <!-- Second row of buttons -->
+                <div class="row mt-4">
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-black d-flex align-items-center justify-content-center text-white"
+                            href="/service_view">Interior & Exterior Design</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-orange d-flex align-items-center justify-content-center text-white"
+                            href="/swimming_view">Swimming Pools</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-black d-flex align-items-center justify-content-center text-white"
+                            href="/freelancing_view">Freelancing</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-orange d-flex align-items-center justify-content-center text-white"
+                            href="/joinventure_view">Joint Venture</a>
+                    </div>
+                </div>
+
+                <!-- Third row of buttons -->
+                <div class="row mt-4">
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-black d-flex align-items-center justify-content-center text-white"
+                            href="/landscape_view">Landscape & Layout Formation</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-orange d-flex align-items-center justify-content-center text-white"
+                            href="/fabrication_view">Fabrication & Woodwork</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-black d-flex align-items-center justify-content-center text-white"
+                            href="/paintcontract_view">Paint Contract</a>
+                    </div>
+                    <div class="col-md-3 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-orange d-flex align-items-center justify-content-center text-white"
+                            href="/retro_fitting_view">Retro Fitting Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="project">
+                <!-- Our Projects Section -->
+                <div class="section-header text-center mt-5">
+                    <h2 style="font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); color: #0B192C;">
+                        <b>Our Projects</b>
+                    </h2>
+
+                </div>
+
+                <!-- Buttons for Projects -->
+                <div class="row mt-4">
+                    <div class="col-md-6 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-black d-flex align-items-center justify-content-center text-white"
+                            href="/ongoing_project_view">Ongoing Projects</a>
+                    </div>
+                    <div class="col-md-6 col-12 d-flex justify-content-center mb-3">
+                        <a class="btn service-btn btn-orange d-flex align-items-center justify-content-center text-white"
+                            href="/completed_project_view">Completed Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Custom styles for buttons -->
+    <style>
+        .service-btn {
+            width: 100%;
+            /* Ensure buttons are of equal width */
+            height: 80px;
+            /* Increased height for larger buttons */
+            font-size: 1.2rem;
+            /* Larger text */
+            border-radius: 12px;
+            /* Slightly more rounded button edges */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transition for hover effects */
+            text-transform: uppercase;
+            /* Make the text uppercase for a modern look */
+            font-weight: bold;
+            /* Bold text for emphasis */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Add subtle shadow for 3D effect */
+        }
+
+        .service-btn:hover {
+            transform: scale(1.1);
+            /* Enlarge slightly on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            /* Increase shadow on hover */
+        }
+
+        .btn-black {
+            background-color: #808080;
+        }
+
+        .btn-orange {
+            background-color: #31bfd9;
+        }
+
+        .btn-black:hover,
+        .btn-orange:hover {
+            opacity: 0.85;
+            /* Slight opacity change on hover for effect */
+        }
+
+        .service-btn:active {
+            transform: scale(1);
+            /* Reset scaling on button click */
+            box-shadow: none;
+            /* Remove shadow on click */
+        }
+    </style>
+
+
+<!-- Team Start -->
+<div class="team">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 style="font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); color: #0B192C;">
+                <b>Founder & CEO</b>
+            </h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="team-item text-center">
+                    <div class="team-img mb-3">
+                        <img src="{% static 'img/boss.jpeg' %}" alt="Team Image" class="img-fluid"
+                            style="height: 315px; width: 250px; object-fit: cover;">
+                    </div>
+                    <div class="team-text">
+                        <h2>ANANDKUMAR H</h2>
+                        <p><b>Founder</b></p>
+                    </div>
+                    <div class="team-social mt-3">
+                        <a class="social-tw mx-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb mx-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in mx-2" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="team-item text-center">
+                    <div class="team-img mb-3">
+                        <img src="{% static 'img/f1.jpeg' %}" alt="Team Image" class="img-fluid"
+                            style="height: 312px; width: 250px; object-fit: cover;">
+                    </div>
+                    <div class="team-text">
+                        <h2>PRAJWAL AK</h2>
+                        <p><b>CEO</b></p>
+                    </div>
+                    <div class="team-social mt-3">
+                        <a class="social-tw mx-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb mx-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in mx-2" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+    <style>
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background-color: #f4f4f4;
+            /* Background for the marquee */
+            border: 2px solid #0B192C;
+            /* Border color */
+            border-radius: 10px;
+            /* Rounded corners */
+            padding: 10px 0;
+            /* Some padding for better appearance */
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 15s linear infinite;
+            /* Animation to scroll content */
+            white-space: nowrap;
+        }
+
+        .marquee-content .project-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0B192C;
+            /* Project name color */
+            margin-right: 30px;
+            /* Space between project names */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+ <div class="container mt-5">
+        <div class="section-header text-center mt-5">
+            <h2 style="font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); color: #0B192C;">
+                <b>Our Amazing Projects</b>
+            </h2>
+
+            <p style="font-weight: bold;">Check out the list of projects we have worked on!</p>
+        </div>
+
+        <!-- Marquee Container -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="project-name">Project Alpha</div>
+                <div class="project-name">Project Beta</div>
+                <div class="project-name">Project Gamma</div>
+                <div class="project-name">Project Delta</div>
+                <div class="project-name">Project Epsilon</div>
+                <div class="project-name">Project Zeta</div>
+                <div class="project-name">Project Theta</div>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* Custom style for the checkmark */
+        .plan-details .checkmark {
+            color: #1d3c6b;
+            /* Dark blue color */
+            font-size: 1.2rem;
+            /* Adjust size as needed */
+            margin-right: 10px;
+            /* Space between checkmark and text */
+            vertical-align: middle;
+            /* Align vertically with text */
+        }
+
+        /* Optional: Add padding and background to the list for better visual */
+        .plan-details {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .plan-details li {
+            background-color: #f1f3f5;
+            /* Light background color */
+            border: 1px solid #ddd;
+            /* Light border around each item */
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .plan-details li:hover {
+            background-color: #e0e7ff;
+            /* Light blue hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Shadow on hover */
+        }
+    </style>
+    <style>
+        /* Styling for the plan cards */
+        .plans-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .plan-card {
+            background-color: #E6F7FF;
+            /* Light bluish background */
+            width: 100%;
+            /* Width is flexible, based on the parent container */
+            max-width: 550px;
+            /* Maximum width for the card */
+            height: 550px;
+            /* Fixed height */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .plan-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF8225;
+            margin-bottom: 15px;
+        }
+
+        .plan-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .plan-details li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .checkmark {
+            color: green;
+            margin-right: 10px;
+        }
+    </style>
+
+
+<!-- Start of how it works -->
+<section class="main-section bb-how-it-works bnblight">
+    <div class="stepper-container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 col-lg-7 col-xxl-6">
+                <div class="text-center">
+                    <h2 class="pt-3">How it works</h2>
+                    <p style="line-height: 1.3; color:#635189" class="pb-4">
+                        Our house construction steps are simple and easy to understand: Plan - Build - Track - Settle in.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stepper and Dotted Chain -->
+        <div class="bb-stepper-slider">
+            <div class="bb-stepper">
+                <ul class="bb-steps">
+                    <li class="bb-step active" data-step="1">
+                        <button class="btn-secondary bb-step-btn" style="border:1px solid #000; font-size:14px   ">1</button>
+                        <span class="step-title" style="color:#1d1a12">Raise a <br /> Request</span>
+                    </li>
+                    <li class="dotted-chain"></li>
+                    <li class="bb-step" data-step="2">
+                        <button class="btn-secondary bb-step-btn" style="border:1px solid #000;">2</button>
+                        <span class="step-title" style="color:#1d1a12">Meet our <br /> Expert</span>
+                    </li>
+                    <li class="dotted-chain"></li>
+                    <li class="bb-step" data-step="3">
+                        <button class="btn-secondary bb-step-btn" style="border:1px solid #000;">3</button>
+                        <span class="step-title" style="color:#1d1a12">Book <br /> with us</span>
+                    </li>
+                    <li class="dotted-chain"></li>
+                    <li class="bb-step" data-step="4">
+                        <button class="btn-secondary bb-step-btn" style="border:1px solid #000;">4</button>
+                        <span class="step-title" style="color:#1d1a12">Receive <br /> Plans</span>
+                    </li>
+                    <li class="dotted-chain"></li>
+                    <li class="bb-step" data-step="5">
+                        <button class="btn-secondary bb-step-btn" style="border:1px solid #000;">5</button>
+                        <span class="step-title" style="color:#1d1a12">Track & <br /> Transact</span>
+                    </li>
+                    <li class="dotted-chain"></li>
+                    <li class="bb-step" data-step="6">
+                        <button class="btn-secondary bb-step-btn" style="border:1px solid #000;">6</button>
+                        <span class="step-title" style="color:#1d1a12">Settle <br /> in</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Image -->
+            <figure class="bb-stepper__main-image" style="height: unset; text-align: center;">
+                <img src="{% static 'img/raise.png' %}" alt="Raise a request" loading="lazy" style="width: 270px; height: 314px;" />
+            </figure>
+
+<!-- Visible Description Section -->
+<div class="description-box">
+    <!-- Each description item is hidden by default -->
+    <div class="description-item" data-step="1" style="display: block;">
+        <h3 class="description-heading" style="font-size: 1.2rem; color: #1d1a12;">01 Raise Request</h3>
+        <p class="description-text" style="font-size: 1rem; color: #1d1a12;">
+            Raise a service request or call us at +91 8217637187. Our technical expert will get in touch with you.
+        </p>
+    </div>
+    <div class="description-item" data-step="2" style="display: none;">
+        <h3 class="description-heading" style="font-size: 1.2rem; color: #1d1a12;">02 Meet Our Expert</h3>
+        <p class="description-text" style="font-size: 1rem; color: #1d1a12;">
+            Our experts visit you to take all the requirements and submit exhaustive specifications.
+        </p>
+    </div>
+    <div class="description-item" data-step="3" style="display: none;">
+        <h3 class="description-heading" style="font-size: 1.2rem; color: #1d1a12;">03 Book with Us</h3>
+        <p class="description-text" style="font-size: 1rem; color: #1d1a12;">
+            Good to go. You pay 5% of the estimated project cost as Booking Amount.
+        </p>
+    </div>
+    <div class="description-item" data-step="4" style="display: none;">
+        <h3 class="description-heading" style="font-size: 1.2rem; color: #1d1a12;">04 Receive Designs</h3>
+        <p class="description-text" style="font-size: 1rem; color: #1d1a12;">
+            Our Professional will provide exhaustive drawings and designs till the customer is fully satisfied.
+        </p>
+    </div>
+    <div class="description-item" data-step="5" style="display: none;">
+        <h3 class="description-heading" style="font-size: 1.2rem; color: #1d1a12;">05 Track & Transact</h3>
+        <p class="description-text" style="font-size: 1rem; color: #1d1a12;">
+            To ensure absolute trust, A M Construction provides an escrow model where you transfer the amount for the stage of the project.
+        </p>
+    </div>
+    <div class="description-item" data-step="6" style="display: none;">
+        <h3 class="description-heading" style="font-size: 1.2rem; color: #1d1a12;">06 Settle In</h3>
+        <p class="description-text" style="font-size: 1rem; color: #1d1a12;">
+            We make sure you are well settled in your new home. Our journey together doesn't end here.
+        </p>
+        </div>
+    </div>
+        </div>
+        <div style="margin: 1.5rem; text-align: center;">
+    <button data-toggle="modal" data-target="#newModal"
+        style="background-color: #808080; color: #000000; width: 282px; padding: .5rem 1.5rem; border: none; font-weight: 600; font-family:monospace">
+        Start Your Construction
+    </button>
+</div>
+    </div>
+</section>
+
+<!-- end of how it works -->
+
+<style>
+.bb-step-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem;
+    line-height: 40px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #000;
+    cursor: pointer;
+    color: black; /* Default text color */
+}
+
+/* When the button is visited, change the text and background color */
+.bb-step-btn:visited {
+    background-color: black; /* Background color after visiting */
+    color: cream; /* Text color after visiting */
+}
+
+<!--.bb-step-btn:hover {-->
+<!--    background-color: #ccc; /* Optional: Add a hover effect */-->
+<!--}-->
+
+.bb-step.active .bb-step-btn {
+    background-color: black;
+    color: white;
+}
+
+/* Adjusted the flexbox alignment for better spacing */
+.bb-steps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+.bb-step {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+/* Main stepper container */
+.bb-stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-title {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #1d1a12;
+}
+
+.bb-step.active .bb-step-btn {
+    background-color: black;
+    color: white;
+}
+
+/* Dotted chain between steps */
+.dotted-chain {
+    width: 90px;
+    height: 6px;
+    border-top: 3px dotted #000;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the main description box */
+.description-box {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #1d1a12;
+}
+
+/* Style for the container holding the boxes */
+.swiper-wrapper {
+    display: flex; /* Aligns boxes in a row */
+    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+    justify-content: space-between; /* Adds equal space between boxes */
+    gap: 1rem; /* Adds spacing between boxes */
+    padding: 20px; /* Adds padding inside the container */
+}
+
+/* Style for individual boxes */
+.swiper-slide.bb-stepper__card {
+    flex: 1 1 calc(33.33% - 1rem); /* 3 boxes per row, minus the gap */
+    max-width: calc(33.33% - 1rem); /* Same as above for consistent width */
+    background-color: #f9f9f9; /* Box background color */
+    border: 1px solid #e0e0e0; /* Subtle border for boxes */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    text-align: center; /* Centers the content */
+    padding: 20px; /* Inner spacing for the box content */
+}
+
+/* Ensure the card title and content are spaced evenly */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    /* Mobile view adjustments for the buttons */
+    .bb-step-btn {
+        width: 30px; /* Smaller button width */
+        height: 30px; /* Smaller button height */
+        font-size: 0.8rem; /* Smaller font size */
+        line-height: 30px; /* Adjust line-height */
+    }
+
+    /* Adjust the step titles to be smaller on mobile */
+    .step-title {
+        font-size: 0.7rem; /* Smaller font size for mobile */
+    }
+
+    .dotted-chain {
+        width: 14px;
+        height: 5px;
+        border-top: 1px dotted #000;
+        margin-top: -23px;
+        margin-bottom: 10px;
+    }
+
+    /* Smaller description text */
+    .description-text {
+        font-size: 0.8rem; /* Smaller font size for text */
+    }
+}
+
+</style>
+
+<!-- start of FAQs -->
+<section class="about-area about4 pt-5">
+    <h2 class="text-center">FAQs</h2>
+    <div id="faq-container" style="max-width: 800px; margin: 0 auto;">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <h5 onclick="toggleAnswer('ans-1', 'head-1')" class="faq-item-heading">
+                <div style="max-width:90%">1. What is A M Construction?</div>
+               <img id="head-5" src="{% static 'img/arrow.png' %}" style="width: 16px; height: 16px;" loading="lazy" />
+            </h5>
+            <p id="ans-1" class="faq-item-ans" style="display: none;">
+                A M Construction is a tech-enabled construction company simplifying home construction. It uses technology-based solutions to deliver high-quality homes on time & within budget.
+            </p>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <h5 onclick="toggleAnswer('ans-3', 'head-3')" class="faq-item-heading">
+                <div style="max-width:90%">2. Is it more expensive than a local contractor?</div>
+              <img id="head-5" src="{% static 'img/arrow.png' %}" style="width: 16px; height: 16px;" loading="lazy" />
+            </h5>
+            <p id="ans-3" class="faq-item-ans" style="display: none;">
+                No, A M Construction is not more expensive than a local contractor. It offers packages at par with market rates and ensures 0 cost overruns during the construction project.
+            </p>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+            <h5 onclick="toggleAnswer('ans-5', 'head-5')" class="faq-item-heading">
+                <div style="max-width:90%">3. How many projects have been delivered?</div>
+                <img id="head-5" src="{% static 'img/arrow.png' %}" style="width: 16px; height: 16px;" loading="lazy" />
+            </h5>
+            <p id="ans-5" class="faq-item-ans" style="display: none;">
+                A M Construction has delivered over 7000+ homes, covering 3,500,000+ Sq.ft in 800+ pincodes across 10 cities in India.
+            </p>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="faq-item">
+            <h5 onclick="toggleAnswer('ans-6', 'head-6')" class="faq-item-heading">
+                <div style="max-width:90%">4. Will my home be ready on time?</div>
+                <img id="head-5" src="{% static 'img/arrow.png' %}" style="width: 16px; height: 16px;" loading="lazy" />
+            </h5>
+            <p id="ans-6" class="faq-item-ans" style="display: none;">
+                Yes, it will. A M Construction follows a system where each stage of completion adheres to a particular timeframe. Should any delay occur despite this, the contractor will become liable to a penalty.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- end of FAQs -->
+<style>
+#faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-bottom: 0; /* No bottom margin here */
+    position: relative; /* Make sure the line can be positioned correctly */
+}
+
+.faq-item-heading div {
+    flex-grow: 1; /* Make the text area take up available space */
+}
+
+.faq-item-heading img {
+    transition: transform 0.3s ease; /* Add smooth transition for rotation */
+    margin-left: 10px; /* Add distance between the question and the arrow */
+}
+
+.faq-item-heading.active img {
+    transform: rotate(180deg); /* Rotate the arrow when active */
+}
+
+/* Add straight line beneath question */
+.faq-item-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000000; /* Horizontal line color */
+}
+
+/* Styling for the answer section */
+.faq-item-ans {
+    padding: 15px;
+    display: none;  /* Hide answers by default */
+    background-color: #f9f9f9;
+    border: none;
+    border-top: none;
+    border-radius: 0 0 0 0;
+}
+</style>
+    <script>
+        function toggleAnswer(answerId, arrowId) {
+    // Toggle the display of the answer
+    var answer = document.getElementById(answerId);
+    var arrow = document.getElementById(arrowId);
+
+    // If the answer is visible, hide it, and vice versa
+    if (answer.style.display === "none") {
+        answer.style.display = "block"; // Show the answer
+        arrow.parentNode.classList.add('active'); // Add active class to rotate the arrow
+    } else {
+        answer.style.display = "none"; // Hide the answer
+        arrow.parentNode.classList.remove('active'); // Remove active class to rotate back
+    }
+}
+
+    </script>
+
+
+
+    <!--End of FAQ Script-->
+<!--Our Eco Plan-->
+    <div class="section-header text-center mt-5">
+        <h2 style="font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); color: #0B192C;">
+            <b>Our Eco Plans</b>
+        </h2>
+
+
+    </div>
+    <div class="container" style="background-color: #808080; padding: 30px; border-radius: 10px;">
+        <div class="plans-wrapper">
+            <!-- Eco Budget Plan -->
+            <div class="plan-card" style="background-color: #31bfd9; padding: 20px; border-radius: 10px; color: white;">
+                <h3 style="font-weight: bold; color: #000000;">Eco<br> Budget</h3>
+                <div class="price">₹1669/Sq.Ft</div>
+                <ul class="plan-details">
+                    <li><span class="checkmark">&#10003;</span> Floor plans + Structural</li>
+                    <li><span class="checkmark">&#10003;</span> Standard Elevation</li>
+                    <li><span class="checkmark">&#10003;</span> Vitrified Tiles Flooring</li>
+                    <li><span class="checkmark">&#10003;</span> Modern Bathroom and Kitchen</li>
+                    <li><span class="checkmark">&#10003;</span> Main Door</li>
+                </ul>
+            </div>
+
+            <!-- Eco Standard Plan -->
+            <div class="plan-card" style="background-color: #31bfd9; padding: 20px; border-radius: 10px; color: white;">
+                <h3 style="font-weight: bold; color: #000000;">Standard <br>Budget</h3>
+                <div class="price">₹1829/Sq.Ft</div>
+                <ul class="plan-details">
+                    <li><span class="checkmark">&#10003;</span>Floor plans + Structural</li>
+                    <li><span class="checkmark">&#10003;</span>Classic Elevation</li>
+                    <li><span class="checkmark">&#10003;</span>Premium Vitrified Tiles Flooring</li>
+                    <li><span class="checkmark">&#10003;</span>Modern Bathroom and Kitchen</li>
+                    <li><span class="checkmark">&#10003;</span>Teak Main Door</li>
+                </ul>
+            </div>
+
+            <!-- Eco Premium Plan -->
+            <div class="plan-card" style="background-color: #31bfd9; padding: 20px; border-radius: 10px; color: white;">
+                <h3 style="font-weight: bold; color: #000000;">Premium <br>Budget</h3>
+                <div class="price">₹1989/Sq.Ft</div>
+                <ul class="plan-details">
+                    <li><span class="checkmark">&#10003;</span>Floor plans + Structural</li>
+                    <li><span class="checkmark">&#10003;</span>Elegant Elevation</li>
+                    <li><span class="checkmark">&#10003;</span>Granite Flooring</li>
+                    <li><span class="checkmark">&#10003;</span>Premium Bathroom and Kitchen</li>
+                    <li><span class="checkmark">&#10003;</span>Premium Teak</li>
+                </ul>
+            </div>
+
+            <!-- Eco Rich Plan -->
+            <div class="plan-card" style="background-color: #31bfd9; padding: 20px; border-radius: 10px; color: white;">
+                <h3 style="font-weight: bold; color: #000000;">Luxury <br>Budget</h3>
+                <div class="price">₹2169/Sq.Ft</div>
+                <ul class="plan-details">
+                    <li><span class="checkmark">&#10003;</span>Floor plans + Structural, Electrical and Plumbing</li>
+                    <li><span class="checkmark">&#10003;</span>Contemporary Elevation</li>
+                    <li><span class="checkmark">&#10003;</span>Premium Granite Flooring</li>
+                    <li><span class="checkmark">&#10003;</span>Premium Bathroom and Kitchen</li>
+                    <li><span class="checkmark">&#10003;</span>Burma Teak</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <style>
+        .plan-card:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+    </style>
+    <style>
+        .whatsapp-icon {
+            width: 35px;
+            /* Adjust the width as needed */
+            height: 36px;
+            /* Adjust the height as needed */
+            display: block;
+            /* Ensures the image doesn't have extra space around it */
+            border-radius: 50%;
+            /* Makes it circular */
+            background-color: transparent;
+            /* Ensures no background is applied */
+        }
+    </style>
+
+    </style>
+
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            width: 98%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .plans-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .plan-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 22%;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .plan-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.25em;
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+
+        .plan-details {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .plan-details li {
+            margin-bottom: 8px;
+        }
+
+        .get-started-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .get-started-btn:hover {
+            background-color: #218838;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+            z-index: 1000;
+        }
+
+
+
+        .whatsapp-btn i {
+            margin-right: 5px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .plan-card {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .plan-card {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <!-- Add Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Countries We Offer Start -->
+
+
+    <br>
+    <div class="section-header text-center mt-5">
+        <h2 style="font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); color: #0B192C;">
+            <b>Contact Us</b>
+        </h2>
+
+
+    </div>
+
+ <div class="container col-md-12" style="background-color: #808080; padding: 30px; border-radius: 10px;">
+    <div class="service row">
+        <div class="row">
+            <!-- Contact Form Section -->
+            <div class="col-lg-6 col-md-6 col-xl-6 mx-auto wow fadeInUp" data-wow-delay="0.3s">
+                <div class="country-item shadow-lg p-4 rounded form-container">
+                    <h4 class="mb-4 text-center" style="color: black;"><b>Leave a Message</b></h4>
+                    <form method="POST" action="{% url 'index' %}" enctype="multipart/form-data"
+                          class="bg-white p-4 rounded">
+                        {% csrf_token %}
+                        <!-- First and Last Name Row -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="first_name" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name"
+                                       placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="last_name" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name"
+                                       placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+
+                        <!-- Email and Phone Row -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                       placeholder="Enter your email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone"
+                                       placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+
+                        <!-- Subject and Message Row -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                       placeholder="Enter subject" required>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"
+                                          placeholder="Enter your message" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary w-100 px-4 py-3 mt-4"
+                                    style="background-color: #D0D0D0; border-color: #808080; font-size: 1.1rem;">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <br>
+            </div>
+
+            <!-- Location Section -->
+            <div class="col-lg-6 col-xl-6 mx-auto wow fadeInUp" data-wow-delay="0.3s">
+                <div class="country-item shadow-lg p-4 rounded bg-light"
+                     style="height: 400px;  background-color: #f8d9e1;">
+                    <!-- Embed Google Map -->
+                    <div class="map_container" style="background-color: transparent; padding: 0; height: 100%;">
+                        <div class="map" style="height: 100%; width: 100%;">
+                            <!-- Google Maps Embed -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.5989281725467!2d75.0457806!3d15.393241100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d16b09112c47%3A0xfc0bb7b04827f6b0!2sNavanagar%20Vegetable%20Market!5e0!3m2!1sen!2sin!4v1696688889507!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+    .form-container {
+        background-color: #D0D0D0;
+        height: 600px; /* Default size for larger screens */
+        overflow-y: auto;
+    }
+
+    @media (max-width: 768px) {
+        .form-container {
+            height: 850px; /* Adjusted size for mobile view */
+        }
+    }
+</style>
+
+
+
+
+
+
+    <style>
+        .btn-primary:hover {
+            background-color: #333;
+            border-color: #333;
+            transition: all 0.3s ease;
+        }
+    </style>
+    <style>
+        .light-pink-bg {
+            background-color: #f8d9e1;
+        }
+
+        .country-item {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        .country-item h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #0B192C;
+            /* Updated color */
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1rem;
+            transition: none;
+            /* Disable transition for focus */
+            border: 1px solid #ccc;
+            /* Light gray border */
+        }
+
+        .form-control:focus {
+            box-shadow: none !important;
+            /* Remove focus box shadow */
+            outline: none !important;
+            /* Remove focus outline */
+            border-color: #ccc !important;
+            /* Retain the default border color */
+        }
+
+        .btn-primary {
+            font-size: 1.1rem;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background-color: #0B192C;
+            /* Updated button color */
+            border-color: #0B192C;
+        }
+
+        .btn-primary:hover {
+            background-color: #0B192C;
+            border-color: #0B192C;
+            box-shadow: none;
+            /* Remove hover shadow */
+        }
+
+        .bi {
+            font-size: 1.25rem;
+            color: #007bff;
+        }
+
+        .list-unstyled li {
+            font-size: 1.1rem;
+        }
+
+        /* Remove any hover/focus effect */
+        .no-focus:focus,
+        .no-focus:hover {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        /* Optional: Remove the default focus outline for all input fields globally */
+        input:focus,
+        textarea:focus,
+        button:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Prevent input fields from showing any color or shadow when clicked */
+        .form-control:focus,
+        .form-control:hover {
+            background-color: #fff !important;
+            /* Remove color change */
+            border-color: #ccc !important;
+            /* Keep the border consistent */
+        }
+    </style>
+
+ <!-- Footer Start -->
+    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-contact">
+                        <h2>Office Contact</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>No .8. Ramchandrapura Vidyaranyapura Main Road.<br> (opp
+                            Bloom field garden) Vidyaranyapura, Bengaluru-560097</p>
+                        <p><i class="fa fa-phone-alt"></i>+91 8217637187</p>
+                        <p><i class="fa fa-envelope"></i>amconstruction1111@gmail.com</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="" class="mx-3 text-primary"><i class="fab fa-twitter"></i></a>
+                            <a href="" class="mx-3 text-primary"><i class="fab fa-facebook-f"></i></a>
+                            <a href="" class="mx-3 text-danger"><i class="fab fa-youtube"></i></a>
+                            <a href="" class="mx-3" style="color: #000000;"><i class="fab fa-instagram"></i></a>
+
+                            <a href="" class="mx-3 text-primary"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-link">
+                        <h2>Services Areas</h2>
+                        <a href="">Building Planning</a>
+                        <a href="">Structural Designs</a>
+                        <a href="">3D Elevation</a>
+                        <a href="">Renovation</a>
+                        <a href="">Interior & Exterior Design</a>
+                        <a href="">Swimming Pools</a>
+                        <a href="">Freelancing</a>
+                        <a href="">Joint Venture</a>
+                        <a href="">Landscape & Layout Formation</a>
+
+                        <a href="">Fabrication & Woodwork</a>
+                        <a href="">Paint Contract</a>
+
+                        <a href="">Retro Fitting Services</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-link">
+                        <h2>Useful Pages</h2>
+                        <a href="">About Us</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Services</a>
+                        <a href="">Projects</a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="newsletter">
+                        <h2>Enquiry</h2>
+
+                        <div class="form">
+                            <input class="form-control" placeholder="Email here">
+                            <button class="btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-menu">
+            <div class="f-menu">
+                <a href="">Terms of use</a>
+                <a href="">Privacy policy</a>
+                <a href="">Cookies</a>
+                <a href="">Help</a>
+                <a href="">FQAs</a>
+            </div>
+        </div>
+        <div class="container copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; <a href="#" style="color: #000000; font-weight: bold;">A M Construction</a>, All Right Reserved.</p>
+
+                </div>
+                <div class="col-md-6">
+                    <p>Designed By <a href="https://htmlcodex.com" style="color: #000000; font-weight: bold;">Pro Practical Tech Solutions</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div>
+        <a href="https://wa.me/+918105984790" class="whatsapp-btn" target="_blank">
+            <img src="{% static 'img/wtsp1.png' %}" alt="WhatsApp" class="whatsapp-icon" style="width: 60px; height: 60px;">
+        </a>
+    </div>
+    <br>
+
+
+    </div>
+
+
+  <!-- JavaScript -->
+
+  <!--How it works script-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded'); // Log when the DOM is ready
+
+    let currentStep = 1; // Default starting step
+    let autoStepInterval;
+
+    // Object to map each step to its corresponding image and description
+    const stepImages = {
+        1: { src: '{% static 'img/raise.png' %}', alt: 'Raise a request' },
+        2: { src: '{% static 'img/meet.png' %}', alt: 'Meet our expert' },
+        3: { src: '{% static 'img/book.png' %}', alt: 'Book with us' },
+        4: { src: '{% static 'img/plan.png' %}', alt: 'Receive Plans' },
+        5: { src: '{% static 'img/track.png' %}', alt: 'Track & Transact' },
+        6: { src: '{% static 'img/settle.png' %}', alt: 'Settle in' }
+    };
+
+    // Function to update the active step, description, and image
+    function updateActiveStep(stepIndex) {
+        console.log(`Updating to step ${stepIndex}`); // Log the current step
+
+        // Mark all steps up to the current step as visited
+        markStepsAsVisited(stepIndex);
+
+        // Update active button and color
+        document.querySelectorAll('.bb-step').forEach((step) => {
+            step.classList.remove('active');
+        });
+        const activeStep = document.querySelector(`.bb-step[data-step="${stepIndex}"]`);
+        console.log('Active step:', activeStep); // Log the active step
+        activeStep.classList.add('active');
+
+        // Hide all descriptions and show the corresponding one
+        document.querySelectorAll('.description-item').forEach((desc) => {
+            desc.style.display = 'none';
+        });
+        const currentDescription = document.querySelector(`.description-item[data-step="${stepIndex}"]`);
+        console.log('Current description:', currentDescription); // Log the current description
+        if (currentDescription) {
+            currentDescription.style.display = 'block';
+        }
+
+        // Update the main image based on the step
+        const image = document.querySelector('.bb-stepper__main-image img');
+        console.log('Updating image src:', stepImages[stepIndex].src); // Log image source
+        if (stepImages[stepIndex]) {
+            image.src = stepImages[stepIndex].src;
+            image.alt = stepImages[stepIndex].alt;
+        }
+    }
+
+    // Function to mark all steps up to the current step as visited
+    function markStepsAsVisited(stepIndex) {
+        for (let i = 1; i <= stepIndex; i++) {
+            const step = document.querySelector(`.bb-step[data-step="${i}"]`);
+            console.log(`Marking step ${i} as visited`); // Log when a step is marked as visited
+            if (!step.classList.contains('visited')) {
+                step.classList.add('visited');
+            }
+        }
+
+        // Update the visited buttons color
+        document.querySelectorAll('.bb-step.visited .bb-step-btn').forEach((btn) => {
+            btn.style.backgroundColor = 'black';  // Change the button background color for visited steps
+            btn.style.color = 'white';  // Button text color when visited
+        });
+    }
+
+    // Function to reset all button colors and visited states when starting over
+    function resetSteps() {
+        console.log('Resetting all steps'); // Log when all steps are reset
+        currentStep = 1; // Start from the first step
+
+        document.querySelectorAll('.bb-step').forEach((step) => {
+            step.classList.remove('visited');
+            step.classList.remove('active'); // Remove the active class from all steps
+            const btn = step.querySelector('.bb-step-btn');
+            btn.style.backgroundColor = ''; // Reset button color
+            btn.style.color = ''; // Reset button text color
+        });
+
+        // Set the first step as active
+        const firstStep = document.querySelector('.bb-step[data-step="1"]');
+        if (firstStep) {
+            firstStep.classList.add('active');
+        }
+
+        // Reset the image and description to the first step
+        const image = document.querySelector('.bb-stepper__main-image img');
+        image.src = stepImages[1].src;
+        image.alt = stepImages[1].alt;
+
+        // Reset description
+        document.querySelectorAll('.description-item').forEach((desc) => {
+            desc.style.display = 'none';
+        });
+        const firstDescription = document.querySelector(`.description-item[data-step="1"]`);
+        if (firstDescription) {
+            firstDescription.style.display = 'block';
+        }
+    }
+
+    // Function to handle the step clicks
+    function handleStepClick(stepIndex) {
+        console.log(`Step ${stepIndex} clicked`); // Log the clicked step
+        clearInterval(autoStepInterval); // Stop auto progression on button click
+        currentStep = stepIndex; // Set current step to the clicked button's step
+        updateActiveStep(currentStep); // Update active step, description, and image
+
+        // Reset all steps to unvisited if the first step is clicked after visiting all steps
+        if (currentStep === 1 && document.querySelector('.bb-step.visited')) {
+            resetSteps(); // Reset all visited steps when the first step is clicked after completing all steps
+        }
+    }
+
+    // Function to start automatic step progression
+    function startAutoMoveStep() {
+        console.log('Starting auto step progression'); // Log when auto-step starts
+        autoStepInterval = setInterval(() => {
+            console.log('Auto-step interval triggered'); // Log when the interval is triggered
+            if (currentStep <= 6) {
+                updateActiveStep(currentStep); // Update active step, description, and image
+                currentStep++;
+            } else {
+                resetSteps(); // Reset steps after completing all steps
+            }
+        }, 2000); // Change step every 3 seconds
+    }
+
+    // Stop auto-move on manual click
+    document.querySelectorAll('.bb-step').forEach((step) => {
+        step.addEventListener('click', function () {
+            handleStepClick(parseInt(this.dataset.step)); // Call handleStepClick on click
+        });
+    });
+
+    // Start the automatic step progression when the page loads
+    startAutoMoveStep();
+});
+</script>
+
+
+<!-- Footer End -->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/slick/slick.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

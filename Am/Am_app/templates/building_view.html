@@ -1,0 +1,307 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AM Construction</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="/static/img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="/static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/static/lib/slick/slick.css" rel="stylesheet">
+    <link href="/static/lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+    /* Ensure images inside the .card have fixed sizes and rounded corners */
+    .card-img-top {
+        width: 100%;  /* Ensure images fill the width of the card */
+        height: 300px;  /* Fixed height for all images */
+        object-fit: cover;  /* Ensure the image fills the area without distortion */
+        border: none;  /* Adds rounded corners to images */
+    }
+
+    /* Optional: Style for the card body and description text */
+    .card-body {
+        text-align: center;
+    }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    /* Optionally, ensure the cards have uniform layout */
+    .image-container {
+        margin-bottom: 30px;
+    }
+</style>
+
+
+    <!-- Custom CSS to make images responsive and dynamic -->
+     <style>
+        /* Ensure images inside the .card have fixed sizes */
+        .card-img-top {
+            width: 100%;  /* Ensure images fill the width of the card */
+            height: 300px;  /* Fixed height for all images */
+            object-fit: cover;  /* Ensure the image fills the area without distortion */
+        }
+
+        /* Optional: Style for the card body and description text */
+        .card-body {
+            text-align: center;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Optionally, ensure the cards have uniform layout */
+        .image-container {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Top Bar Start -->
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12 text-center">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="/static/img/am1.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                        <div class="row justify-content-center">
+                            <div class="col-2 text-center">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-send-mail"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3 style="font-weight: bold;">Email Us</h3>
+                                        <p style="font-weight: bold;">amconstruction1111@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 text-center">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-call"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3 style="font-weight: bold;">Call Us</h3>
+                                        <p style="font-weight: bold;">+91 8217637187</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 text-center">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-text">
+                                        <h3 style="font-weight: bold;">GSTIN</h3>
+                                         <p style="font-weight: bold;">29EHJPP7525R1Z6</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="{% url 'index' %}"  class="nav-item nav-link active">Home</a>
+                            <a href="{% url 'index' %}" class="nav-item nav-link">About</a>
+                            <a href="{% url 'index' %}"  class="nav-item nav-link">Service</a>
+                            <a href="{% url 'index' %}"  class="nav-item nav-link">Projects</a>
+                            <a href="{% url 'index' %}"  class="nav-item nav-link">Contact</a>
+                            <a href="{% url 'job_application_view' %}" class="nav-item nav-link">career</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Building Planning & Estimate</h1>
+       <div class="row mt-4">
+            {% for image in images %}
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.description }}">
+                        <div class="card-body">
+                            <p class="card-text">{{ image.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+ <div class="container col-md-12" style="background-color: #31bfd9; padding: 30px; border-radius: 10px;">
+    <div class="service row">
+        <div class="row g-4">
+            <!-- Contact Form Section -->
+            <div class="col-lg-6 col-xl-6 mx-auto wow fadeInUp" data-wow-delay="0.3s">
+                <div class="country-item shadow-lg p-4 rounded form-container">
+                    <h4 class="mb-4 text-center" style="color: white;"><b>Leave a Message</b></h4>
+                    <form method="POST" action="{% url 'index' %}" enctype="multipart/form-data"
+                          class="bg-white p-4 rounded">
+                        {% csrf_token %}
+                        <!-- First and Last Name Row -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="first_name" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name"
+                                       placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="last_name" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name"
+                                       placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+
+                        <!-- Email and Phone Row -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                       placeholder="Enter your email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone"
+                                       placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+
+                        <!-- Subject and Message Row -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                       placeholder="Enter subject" required>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"
+                                          placeholder="Enter your message" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary w-100 px-4 py-3 mt-4"
+                                    style="background-color: #D0D0D0; border-color: #808080; font-size: 1.1rem;">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <br>
+            </div>
+
+            <!-- Location Section -->
+            <div class="col-lg-6 col-xl-6 mx-auto wow fadeInUp" data-wow-delay="0.3s">
+                <div class="country-item shadow-lg p-4 rounded bg-light"
+                     style="height: 400px; width:300px; background-color: #f8d9e1;">
+                    <!-- Embed Google Map -->
+                    <div class="map_container" style="background-color: transparent; padding: 0; height: 100%;">
+                        <div class="map" style="height: 100%; width: 100%;">
+                            <!-- Google Maps Embed -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.5989281725467!2d75.0457806!3d15.393241100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d16b09112c47%3A0xfc0bb7b04827f6b0!2sNavanagar%20Vegetable%20Market!5e0!3m2!1sen!2sin!4v1696688889507!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+    .form-container {
+        background-color: #D0D0D0;
+        height: 600px; /* Default size for larger screens */
+        overflow-y: auto;
+    }
+
+    @media (max-width: 768px) {
+        .form-container {
+            height: 850px; /* Adjusted size for mobile view */
+        }
+    }
+</style>
+
+
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container copyright">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; <a href="#">Pro Practical Tech Solutions</a>, All Rights Reserved - 2024</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/slick/slick.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TECHNO FAB</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Construction Company Website Template" name="keywords">
+        <meta content="Construction Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+
+    <body>
+  <div class="wrapper">
+    <!-- Top Bar Start -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-12 text-center">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="{% static 'img/logo1.png' %}" alt="Logo" > <!-- Adjusted height -->
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                    <div class="row justify-content-center">
+                        <div class="col-6 text-center">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                   <i class="fa fa-phone-square"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3 style="font-weight: bold;">Call Us</h3>
+                                    <p style="font-weight: bold;">+91 08362972144</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 text-center">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3 style="font-weight: bold;">Email Us</h3>
+                                    <p style="font-weight: bold;">technofabpeb@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="nav-bar">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <a href="#" class="navbar-brand" style="color: white;">MENU</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto">
+                    <a href="{% url 'index' %}" class="nav-item nav-link active" style="color: white;">Home</a>
+                    <a href="#about" class="nav-item nav-link active" style="color: white;">About</a>
+                    <a href="#gallery" class="nav-item nav-link" style="color: white;">Gallery</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: white;">Service</a>
+                        <div class="dropdown-menu bg-secondary">
+                            <a href="#general" class="dropdown-item text-white">General Fabrication</a>
+                            <a href="#service" class="dropdown-item text-white">Shot Blasting</a>
+                            <a href="#service" class="dropdown-item text-white">EOT Cranes</a>
+                            <a href="#service" class="dropdown-item text-white">C & Z Purlins and Roofing Sheets</a>
+                            <a href="#service" class="dropdown-item text-white">Civil Works</a>
+                            <a href="{% static 'img/DOP.pdf' %}" class="dropdown-item text-white">DOP</a>
+
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: white;">Project</a>
+                        <div class="dropdown-menu bg-secondary">
+                            <a href="{% url 'ongoing_project_view' %}" class="dropdown-item text-white">Ongoing Projects</a>
+                            <a href="{% url 'completed_project_view' %}" class="dropdown-item text-white">Completed Project</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: white;">Certificate</a>
+                        <div class="dropdown-menu bg-secondary">
+                            <a href="{% url 'certificate_view' %}" class="dropdown-item text-white">GST Certificate</a>
+                                 <a href="{% url 'epf_view' %}" class="dropdown-item text-white">EPF Certificate</a>
+                            <a href="{% url 'iso_view' %}" class="dropdown-item text-white">ISO Certificate</a>
+                            <a href="{% url 'lei_view' %}" class="dropdown-item text-white">LEI Certificate</a>
+                            <a href="{% url 'msme_view' %}" class="dropdown-item text-white">MSME-Udyam Certificate</a>
+                            <a href="{% url 'esic_view' %}" class="dropdown-item text-white">ESIC Certificate</a>
+
+                        </div>
+                    </div>
+                     <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: white;">Infrastructure</a>
+                        <div class="dropdown-menu bg-secondary">
+                              <a href="{% static 'img/lom.pdf' %}" class="dropdown-item text-white">List of Machineries and Equipments</a>
+
+                        </div>
+                    </div>
+                    <a href="#contact" class="nav-item nav-link" style="color: white;">Contact</a>
+                    <a href="{% url 'job_application_view' %}" class="nav-item nav-link" style="color: white;">Career</a>
+
+                </div>
+                <div class="ml-auto"></div>
+            </div>
+        </nav>
+
+        <style>
+            .nav-item:hover .nav-link {
+                color: yellow; /* Change color on hover */
+            }
+
+            .dropdown-menu a:hover {
+                background-color: #444; /* Darker background for dropdown items on hover */
+                color: white; /* Keep text white on hover */
+            }
+        </style>
+    </div>
+</div>
+
+
+<style>
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional: Adjust the dropdown position */
+.navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+/* Custom colors */
+.navbar {
+    background-color: #010038; /* Dark background for navbar */
+}
+
+.navbar .nav-link {
+    color: white !important; /* Set orange color for links */
+}
+
+.navbar .dropdown-menu {
+    background-color: black; /* Black background for dropdown */
+}
+
+.navbar .dropdown-item {
+    color: orange; /* Orange dropdown items */
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #444; /* Darker background on hover for dropdown items */
+    color: white; /* White text on hover */
+}
+</style>
+      <style>
+    .carousel-caption {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .carousel-item.active .carousel-caption {
+        opacity: 1;
+    }
+</style>
+
+
+    <!-- Nav Bar End -->
+</div>
+
+    <style>
+        /* Custom styling for the page */
+        body {
+            background-color: #f0f0f0; /* Light grey background for the page */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343a40; /* Dark color for heading */
+        }
+
+        .pdf-card {
+            margin-bottom: 20px; /* Space between cards */
+            height: 200px; /* Decreased height for cards */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow to cards */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #ffecd1; /* Light orange background for each card */
+        }
+
+        .card {
+            height: 100%; /* Ensures all cards are the same height */
+            display: flex;
+            flex-direction: column; /* Allows flex properties */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .card-body {
+            flex-grow: 1; /* Grow to fill the space */
+            display: flex;
+            flex-direction: column; /* Vertical layout */
+            justify-content: space-between; /* Space out elements */
+            padding: 15px; /* Padding inside the card */
+        }
+
+        .btn-view {
+            background-color: #000; /* Black background */
+            color: orange; /* Orange text */
+            border-radius: 0;
+            margin-top: auto; /* Push button to the bottom */
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .btn-view:hover {
+            background-color: #333; /* Darker shade on hover */
+            color: #fff; /* White text on hover */
+        }
+
+        .description-box {
+            border: 1px solid #343a40; /* Dark border for the description box */
+            padding: 10px;
+            background-color: #fff; /* White background for the box */
+            border-radius: 5px; /* Rounded corners */
+            margin-top: 10px; /* Space above the box */
+            flex-grow: 1; /* Allow description box to take available space */
+        }
+
+        /* Ensure the cards are aligned side by side */
+        /* Large screens */
+        .col-md-4 {
+            flex: 0 0 33.33%; /* 3 items per row */
+            max-width: 33.33%; /* Set max width to 33.33% to allow 3 items in a row */
+        }
+
+        /* Medium screens */
+        @media (max-width: 768px) {
+            .col-6 {
+                flex: 0 0 50%; /* 2 items per row on medium screens */
+                max-width: 50%;
+            }
+        }
+
+        /* Smaller screens */
+        @media (max-width: 576px) {
+            .col-12 {
+                flex: 0 0 100%; /* 1 item per row on smaller screens */
+                max-width: 100%;
+            }
+        }
+    </style>
+
+  <style>
+      .description-box {
+    padding: 10px;
+    background-color: #fff; /* White background for the description box */
+    border-radius: 5px;
+    border: 1px solid #343a40; /* Dark border color */
+    color: #343a40; /* Dark text color */
+    margin-bottom: 15px;
+}
+
+.btn-view {
+    background-color: #F09319; /* Blue button */
+    color: white;
+}
+
+.btn-view:hover {
+    background-color: #F09319; /* Darker blue on hover */
+    color: white;
+}
+
+  </style>
+</head>
+<body>
+   <div class="container my-5">
+<div class="container col-md-12">
+    <h1>MSME Certificate</h1>
+
+    <div class="row">
+        {% for dop in dop_objects %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"> <!-- Grid structure: 1 item per row on small screens, 2 on medium, and 3 on large screens -->
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <!-- Description Box -->
+                        <div class="description-box mb-3">
+                            <p>{{ dop.description|default:"No Description" }}</p> <!-- Description or fallback -->
+                        </div>
+                        <!-- Link to View Certificate -->
+                        <a href="{{ dop.pdf.url }}" target="_blank" class="btn btn-view">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12 text-center">
+                <p>No PDFs found.</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+   </div>
+
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

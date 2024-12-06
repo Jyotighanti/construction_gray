@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>AM Construction</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Construction Company Website Template" name="keywords">
+        <meta content="Construction Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+
+    <body>
+  <div class="wrapper">
+    <!-- Top Bar Start -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-12 text-center">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="{% static 'img/logo1.png' %}" alt="Logo" > <!-- Adjusted height -->
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                    <div class="row justify-content-center">
+                        <div class="col-4 text-center">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="flaticon-call"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3 style="font-weight: bold;">Call Us</h3>
+                                    <p style="font-weight: bold;">+91 9620669723</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="flaticon-send-mail"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3 style="font-weight: bold;">Email Us</h3>
+                                    <p style="font-weight: bold;">technofab.mkt@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="nav-bar">
+        <div class="container-fluid">
+             <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                        <a href="#" class="navbar-brand">MENU</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto">
+                                <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+                                 <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                                    <div class="dropdown-menu">
+                                         <a href="{% url 'dop_view1' %}" class="dropdown-item">About </a>
+
+                                        <a href="{% static 'img/DOP.pdf' %}" class="dropdown-item"> DOP </a>
+
+                                        <a href="{% static 'img/lom.pdf' %}" class="dropdown-item">List of Machineries and Equipments:  </a>
+
+
+                                        </div>
+                                    </div>
+                                <a href="#service" class="nav-item nav-link">Service</a>
+
+                                 <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Project</a>
+                                    <div class="dropdown-menu">
+                                        <a href="{% url 'ongoing_project_view' %}" class="dropdown-item">Major Completed Project </a>
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                 <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Certificate</a>
+                                    <div class="dropdown-menu">
+                                        <a href="{% url 'certificate_view' %}" class="dropdown-item">Certificate </a>
+
+
+
+
+                                        </div>
+                                    </div>
+                                <a href="#contact" class="nav-item nav-link">Contact</a>
+                            </div>
+                            <div class="ml-auto">
+
+                            </div>
+                        </div>
+                    </nav>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+</div>
+
+
+
+
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">EOT Cranes.</h1>
+    <div class="row">
+        {% for image in images %}
+            <div class="col-lg-3 col-md-4 col-sm-6 image-container">
+                <div class="card">
+                    <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.description }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ image.description }}</h5>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+
+<!-- Bootstrap JS -->
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'lib/slick/slick.min.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
